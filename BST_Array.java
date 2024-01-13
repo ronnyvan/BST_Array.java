@@ -52,8 +52,8 @@ public class BST_Array {
       }
 
       int power = 2;
-      String result = "";
-      for (int i = 0; i < tree.length; i++) {
+      String result = "Level 0: ";
+      for (int i = 0, level = 1; i < tree.length; i++) {
          if (i == power - 1) {
             boolean emptyRow = true;
             for (int j = i; j < i + power - 1 && j < tree.length; j++) {
@@ -63,7 +63,7 @@ public class BST_Array {
             }
 
             if (emptyRow) break;
-            result += "\n";
+            result += "\nLevel " + level++ +": ";
             power *= 2;
          }
          if (tree[i] != null) {
