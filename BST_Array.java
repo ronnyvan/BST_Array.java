@@ -37,7 +37,7 @@ public class BST_Array {
       if (tree[rootIndex] == val) {
          return true;
       }
-      if (tree[rootIndex] == null || rootIndex >= tree.length) {
+      if (rootIndex >= tree.length || tree[rootIndex] == null) {
          return false;
       }
       if (val < tree[rootIndex])
